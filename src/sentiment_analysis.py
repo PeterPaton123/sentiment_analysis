@@ -10,7 +10,7 @@ import optax
 
 from transformers import BertTokenizerFast, FlaxBertModel
 
-train_df = pd.read_csv("./twitter_training.csv", names=["tweet_id", "entity", "sentiment", "content"])
+train_df = pd.read_csv("./data/twitter_training.csv", names=["tweet_id", "entity", "sentiment", "content"])
 train_df = train_df.dropna()
 train_df['class'], classes = pd.factorize(train_df['sentiment'])
 num_classes = len(classes)
