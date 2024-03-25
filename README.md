@@ -12,7 +12,7 @@ https://chat.openai.com/c/f25dc443-5ed4-4686-9370-f3484582e4d3
 1. Fix the pre-trained language model, maybe explore outside HuggingFace transformers, such as Llama.
 2. Create a variety of adaptor architectures. Construct a docker image/container which takes in a parameter (should be able to be the same image) which takes a model architecture and does cross-validation. Outputs the best model parameters and trains model finally. Use CUDA in training and spin up the adapters in parallel. Given string activations create a Haskell like type system and evaluate accordingly.
 3. Tokenisation and Vector DB storage, a way to access the db in parallel, cloud hosted database/DBAAS (database as a service).
-4. Serve my model as an API endpoint for my inference containers to interact with.
+4. Serve my model as an API endpoint for my inference containers to interact with. (Deploy on google cloud)
 5. An inference script (in its own container), which given an input returns the sentiment. Model quantisation of base model in inference. "dynamic, static (post-training), and quantization-aware training. For most scenarios, post-training quantization offers a good balance between implementation simplicity and performance gains."
             a. Validate the Quantized Model: It's important to test the quantized model to ensure that the loss in precision hasn't significantly affected its accuracy or the quality of its predictions. Run it against your validation set or a representative sample of your data.
 
